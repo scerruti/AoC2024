@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 1 Copyright Fix&#10;&#10;I forgot to exclude puzzle input and text from my repo. This commit removes them and I'll have to clean up my repo history." />
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Part 1 refactored&#10;&#10;Move the safe report code into a separate method.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Day02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day02.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,28 +53,38 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2pccpHWiqfmL8lmCxJg3yExVLrg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Day01 puzzle.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day01 test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day01.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/scerruti/IdeaProjects/AoC2024&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Day01 puzzle.executor": "Run",
+    "Application.Day01 test.executor": "Run",
+    "Application.Day01.executor": "Run",
+    "Application.Day02 example.executor": "Run",
+    "Application.Day02 puzzle.executor": "Run",
+    "Application.Day02.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Day01 puzzle">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Day02 puzzle">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -92,7 +105,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day02 example" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day02" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="example" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day02 puzzle" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day02" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.Day02 example" />
+      <item itemvalue="Application.Day02 puzzle" />
       <item itemvalue="Application.Day01 test" />
       <item itemvalue="Application.Day01 puzzle" />
     </list>
@@ -119,6 +150,7 @@
       <workItem from="1733089493242" duration="613000" />
       <workItem from="1733101154146" duration="4000" />
       <workItem from="1733101173716" duration="181000" />
+      <workItem from="1733101383362" duration="14243000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -144,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733088317218</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Day 1 - Historian Hysteria&#10;&#10;Day 1 of Advent of Code. This is actually my second attempt at creating this repository because I forgot to exclude the data and my code documentation replicated the problem statement.&#10;&#10;This is a working solution for Day 1.">
+      <option name="closed" value="true" />
+      <created>1733101574075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733101574075</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Day 02 - Red-Nosed Reports&#10;&#10;Part 1 is working. Part 2 went off the rails, going to back up and try again fresh.">
+      <option name="closed" value="true" />
+      <created>1733152892989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733152892989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +225,20 @@
     <MESSAGE value="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1." />
     <MESSAGE value="Day 1 Comments&#10;&#10;Added comments to day 1" />
     <MESSAGE value="Day 1 Copyright Fix&#10;&#10;I forgot to exclude puzzle input and text from my repo. This commit removes them and I'll have to clean up my repo history." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 1 Copyright Fix&#10;&#10;I forgot to exclude puzzle input and text from my repo. This commit removes them and I'll have to clean up my repo history." />
+    <MESSAGE value="Day 1 - Historian Hysteria&#10;&#10;Day 1 of Advent of Code. This is actually my second attempt at creating this repository because I forgot to exclude the data and my code documentation replicated the problem statement.&#10;&#10;This is a working solution for Day 1." />
+    <MESSAGE value="Day 02 - Red-Nosed Reports&#10;&#10;Part 1 is working. Part 2 went off the rails, going to back up and try again fresh." />
+    <MESSAGE value="Part 1 refactored&#10;&#10;Move the safe report code into a separate method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 1 refactored&#10;&#10;Move the safe report code into a separate method." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Day02.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
