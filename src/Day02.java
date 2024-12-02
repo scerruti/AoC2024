@@ -25,6 +25,11 @@ public class Day02
      */
     private static int part1(String runType)
     {
+        return countSafe(runType, false);
+    }
+
+    private static int countSafe(String runType, boolean allowDamping)
+    {
         int safe = 0;
 
         try (InputStream dataFile = Day02.class.getResourceAsStream(runType + "/day02.txt"))
@@ -33,35 +38,55 @@ public class Day02
             Scanner data = new Scanner(dataFile);
             while (data.hasNext())
             {
-                System.out.println("Report");
                 String report = data.nextLine();
                 String[] levelsStrings = report.split("\\s+");
                 int[] levels = new int[levelsStrings.length];
                 for (int i = 0; i < levelsStrings.length; i++) {
                     levels[i] = Integer.parseInt(levelsStrings[i]);
                 }
+                System.out.println("Levels: " + Arrays.toString(levels));
 
-                if (isReportSafe(levels)) safe += 1;
-                System.out.println();
+                if (isReportSafe(levels, allowDamping)) safe += 1;
+                System.out.println("\n");
             }
         } catch (IOException e) {throw new RuntimeException(e);}
         return safe;
     }
 
-    private static boolean isReportSafe(int[] levels)
+    private static boolean isReportSafe(int[] levels, boolean allowDamping)
     {
-        boolean safeReport = true;
         int direction = (levels[1] > levels[0]) ? 1 : -1;
 
         for (int i = 1; i < levels.length; i++) {
-            if (isUnsafe(levels[i-1], levels[i], direction)) {
-                safeReport = false;
-                System.out.print("Unsafe");
-                break;
+            boolean isUnsafe = isUnsafe(levels[i-1], levels[i], direction);
+            if (isUnsafe && allowDamping) {
+                System.out.println("Damping ");
+                return isReportSafe(removeLevel(levels, i-2) , false) ||
+                        isReportSafe(removeLevel(levels, i-1), false) ||
+                        isReportSafe(removeLevel(levels, i), false);
+            } else if (isUnsafe) {
+                System.out.print("Unsafe ");
+                return false;
             }
         }
 
-        return safeReport;
+        System.out.print("Safe ");
+        return true;
+    }
+
+    @SuppressWarnings("ManualArrayCopy")
+    private static int[] removeLevel(int[] levels, int i)
+    {
+        if (i < 0 ) return new int[] {0, 0}; // Can't remove tail element - fail
+
+        int[] result = new int[levels.length - 1];
+        for (int j = 0; j < i; j++) {
+            result[j] = levels[j];
+        }
+        for (int j = i+1; j < levels.length; j++) {
+            result[j-1] = levels[j];
+        }
+        return result;
     }
 
     /**
@@ -72,7 +97,7 @@ public class Day02
      */
     private static int part2(String runType)
     {
-       return 0;
+        return countSafe(runType, true);
     }
 
     private static boolean isUnsafe(int firstValue, int secondValue, int direction)
