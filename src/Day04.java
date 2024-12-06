@@ -67,9 +67,7 @@ public class Day04
      */
     private static long part2(String runType)
     {
-        long counter = 0;
         Puzzle wordSearch = getPuzzle(runType);
-
 
         return wordSearch.getXmas();
     }
@@ -132,7 +130,7 @@ public class Day04
                 if (direction > 0) end = (rowLength - col) * rowLength ;
                 else end = col * rowLength + 1;
                 for (int i = col; i < end && i < puzzleLetters.length(); i += rowLength + direction)
-                {;
+                {
                     rowBuilder.append(puzzleLetters.charAt(i));
                 }
                 if (rowBuilder.toString().length() < word.length()) continue;
