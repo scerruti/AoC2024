@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
+import java.util.concurrent.LinkedTransferQueue;
 
 public class Day06
 {
@@ -14,7 +15,8 @@ public class Day06
     private static int width;
     private static int start;
     private static final int[][] DIRECTIONS = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
-    private static ArrayList<Integer[]> obstructionCandidate = new ArrayList<>();
+    private static final HashSet<Integer[]> obstructionCandidate = new HashSet<>();
+    private static final State visits = new State();
 
 
     public static void main(String[] args)
@@ -104,7 +106,7 @@ public class Day06
     {
         try
         {
-            return runSimulation();
+            return runSimulation(true);
         } catch (Exception e)
         {
             /* Ignore */
@@ -112,7 +114,7 @@ public class Day06
         return -999;
     }
 
-    private static long runSimulation() throws Exception
+    private static long runSimulation(boolean saveVisits) throws Exception
     {
         int col = col(start);
         int row = row(start);
@@ -126,6 +128,9 @@ public class Day06
         {
 //            printMap();
             int[] pos = newPosition(row, col, DIRECTIONS[next]);
+            if (saveVisits) {
+                visits.addIfNew(new int[] {row, col}, next);
+            }
 
             if (isObstructed(pos))
             {
@@ -165,11 +170,15 @@ public class Day06
 
     public static int part2()
     {
-        System.out.println("Total Candidates: " + map.length * width);
-        for (int row = 0; row < map.length; row++)
-        {
-            for (int col = 0; col < map[row].length; col++)
+//        System.out.println("Total Candidates: " + map.length * width);
+//        for (int row = 0; row < map.length; row++)
+//        {
+//            for (int col = 0; col < map[row].length; col++)
+            for (Integer[] visit : visits.uniqueLocations())
             {
+
+                int row = visit[0];
+                int col = visit[1];
                 System.out.printf("(%d,%d) ", col, row);
                 if (!isObstructed(row, col))
                 {
@@ -177,7 +186,7 @@ public class Day06
                     try
                     {
                         map[row][col] = 'O';
-                        runSimulation();
+                        runSimulation(false);
                     } catch (Exception e)
                     {
                         System.out.println(e);
@@ -186,7 +195,7 @@ public class Day06
                     map[row][col] = temp;
                 }
             }
-        }
+//        }
         for (Integer[] obstruction : obstructionCandidate) {
             System.out.printf("Candidate: (%d, %d)%n", obstruction[ROW_INDEX], obstruction[COL_INDEX]);
         }
@@ -249,6 +258,7 @@ public class Day06
     private static class State
     {
         HashSet<Integer[]> pathSteps = new HashSet<>();
+
         public boolean addIfNew(int[] position, int next)
         {
             for (Integer[] step : pathSteps) {
@@ -257,6 +267,24 @@ public class Day06
 
             pathSteps.add(new Integer[]{position[0], position[1], next});
             return true;
+        }
+
+        public Set<Integer[]> uniqueLocations()
+        {
+            HashSet<Integer[]> uniqueLocations = new HashSet<>();
+            HashSet<Integer> positions = new HashSet<>();
+
+            for (Integer[] step : pathSteps) {
+                int position = step[0] * width + step[1];
+                boolean newPosition = positions.contains(position);
+                positions.add(position);
+
+                if (newPosition) continue;
+
+                uniqueLocations.add(new Integer[]{step[0], step[1]});
+            }
+
+            return uniqueLocations;
         }
     }
 }
