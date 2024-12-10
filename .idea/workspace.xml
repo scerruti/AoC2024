@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 09 - Disk Fragmenter&#10;&#10;Initial Solution, again, pretty quick.">
-      <change afterPath="$PROJECT_DIR$/resources/example/day09.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day09.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day10.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +82,8 @@
     "Application.Day08 puzzle.executor": "Run",
     "Application.Day09 example.executor": "Run",
     "Application.Day09 puzzle.executor": "Run",
+    "Application.Day10 example.executor": "Run",
+    "Application.Day10 puzzle.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -103,7 +105,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day09 puzzle">
+  <component name="RunManager" selected="Application.Day10 puzzle">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -252,12 +254,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day10 example" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day10" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="example" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day10 puzzle" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day10" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
       <item itemvalue="Application.Day07 example " />
       <item itemvalue="Application.Day08 example" />
       <item itemvalue="Application.Day09 example" />
+      <item itemvalue="Application.Day10 example" />
+      <item itemvalue="Application.Day10 puzzle" />
       <item itemvalue="Application.Day09 puzzle" />
       <item itemvalue="Application.Day08 puzzle" />
       <item itemvalue="Application.Day07 puzzle" />
@@ -298,7 +318,7 @@
       <workItem from="1733101383362" duration="38290000" />
       <workItem from="1733448014279" duration="30829000" />
       <workItem from="1733635688442" duration="3116000" />
-      <workItem from="1733750043377" duration="6776000" />
+      <workItem from="1733750043377" duration="11087000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -420,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733638614597</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Day 09 - Disk Fragmenter&#10;&#10;Initial Solution, again, pretty quick.">
+      <option name="closed" value="true" />
+      <created>1733779020069</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733779020069</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
