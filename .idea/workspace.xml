@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 11 - Plutonian Pebbles&#10;&#10;This is a minimally optimized brute force version. It runs correctly but takes too long.">
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming.">
+      <change afterPath="$PROJECT_DIR$/resources/example/day12a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day12b.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day12c.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day12d.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day12e.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day12.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day11.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +89,13 @@
     "Application.Day10 example.executor": "Run",
     "Application.Day10 puzzle.executor": "Run",
     "Application.Day11 example .executor": "Run",
+    "Application.Day12 example.executor": "Run",
+    "Application.Day12 puzzle.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024/writeups",
+    "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024/resources/example",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,13 +106,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/example" />
       <recent name="$PROJECT_DIR$/writeups" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day11 example ">
+  <component name="RunManager" selected="Application.Day12 puzzle">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -278,6 +286,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day12 example" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day12" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="example" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day12 puzzle" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Day12" />
+      <module name="AoC2024" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
@@ -286,6 +310,8 @@
       <item itemvalue="Application.Day09 example" />
       <item itemvalue="Application.Day10 example" />
       <item itemvalue="Application.Day11 example " />
+      <item itemvalue="Application.Day12 example" />
+      <item itemvalue="Application.Day12 puzzle" />
       <item itemvalue="Application.Day10 puzzle" />
       <item itemvalue="Application.Day09 puzzle" />
       <item itemvalue="Application.Day08 puzzle" />
@@ -327,7 +353,7 @@
       <workItem from="1733101383362" duration="38290000" />
       <workItem from="1733448014279" duration="30829000" />
       <workItem from="1733635688442" duration="3116000" />
-      <workItem from="1733750043377" duration="23346000" />
+      <workItem from="1733750043377" duration="34521000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -473,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733932423495</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming.">
+      <option name="closed" value="true" />
+      <created>1733935569274</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733935569274</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +555,8 @@
     <MESSAGE value="Day 09 - Disk Fragmenter&#10;&#10;Initial Solution, again, pretty quick." />
     <MESSAGE value="Day 10 - Hoof It&#10;&#10;Initial Solution, again, pretty quick." />
     <MESSAGE value="Day 11 - Plutonian Pebbles&#10;&#10;This is a minimally optimized brute force version. It runs correctly but takes too long." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 11 - Plutonian Pebbles&#10;&#10;This is a minimally optimized brute force version. It runs correctly but takes too long." />
+    <MESSAGE value="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,6 +566,25 @@
           <url>file://$PROJECT_DIR$/src/Day05.java</url>
           <line>120</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Day12.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="plot == 14" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/Day12.java</url>
+          <line>76</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Day12.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
