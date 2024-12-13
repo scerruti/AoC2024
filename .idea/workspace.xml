@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming.">
-      <change afterPath="$PROJECT_DIR$/resources/example/day12a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day12b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day12c.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day12d.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day12e.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day12.java" afterDir="false" />
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 12 - Garden Groups&#10;&#10;I feel better about today's code, even if it's messy. I'm worried about the amount of recursion I an using this year.">
+      <change afterPath="$PROJECT_DIR$/resources/example/day13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day13.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +87,7 @@
     "Application.Day11 example .executor": "Run",
     "Application.Day12 example.executor": "Run",
     "Application.Day12 puzzle.executor": "Run",
+    "Application.Day13.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -113,7 +110,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day12 puzzle">
+  <component name="RunManager" selected="Application.Day13">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -302,6 +299,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day13" />
+      <module name="AoC2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
@@ -326,7 +330,13 @@
       <item itemvalue="Application.Day02 puzzle" />
       <item itemvalue="Application.Day01 test" />
       <item itemvalue="Application.Day01 puzzle" />
+      <item itemvalue="Application.Day13" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Day13" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -353,7 +363,8 @@
       <workItem from="1733101383362" duration="38290000" />
       <workItem from="1733448014279" duration="30829000" />
       <workItem from="1733635688442" duration="3116000" />
-      <workItem from="1733750043377" duration="34521000" />
+      <workItem from="1733750043377" duration="35751000" />
+      <workItem from="1734103451345" duration="17329000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -507,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733935569274</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Day 12 - Garden Groups&#10;&#10;I feel better about today's code, even if it's messy. I'm worried about the amount of recursion I an using this year.">
+      <option name="closed" value="true" />
+      <created>1733988867520</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733988867520</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +575,8 @@
     <MESSAGE value="Day 10 - Hoof It&#10;&#10;Initial Solution, again, pretty quick." />
     <MESSAGE value="Day 11 - Plutonian Pebbles&#10;&#10;This is a minimally optimized brute force version. It runs correctly but takes too long." />
     <MESSAGE value="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming." />
+    <MESSAGE value="Day 12 - Garden Groups&#10;&#10;I feel better about today's code, even if it's messy. I'm worried about the amount of recursion I an using this year." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 12 - Garden Groups&#10;&#10;I feel better about today's code, even if it's messy. I'm worried about the amount of recursion I an using this year." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
