@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 13 - Claw Contraption&#10;&#10;Part 1 works, part 2 needs a refactor.">
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression">
+      <change afterPath="$PROJECT_DIR$/resources/example/day14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day14.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day13.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +87,9 @@
     "Application.Day11 example .executor": "Run",
     "Application.Day12 example.executor": "Run",
     "Application.Day12 puzzle.executor": "Run",
-    "Application.Day13.executor": "Run",
+    "Application.Day13.executor": "Debug",
+    "Application.Day14.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024/resources/example",
@@ -101,6 +102,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/example" />
       <recent name="$PROJECT_DIR$/writeups" />
@@ -109,7 +113,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day13">
+  <component name="RunManager" selected="Application.Day14">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -305,6 +309,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day14" />
+      <module name="AoC2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
@@ -329,10 +340,12 @@
       <item itemvalue="Application.Day02 puzzle" />
       <item itemvalue="Application.Day01 test" />
       <item itemvalue="Application.Day01 puzzle" />
+      <item itemvalue="Application.Day14" />
       <item itemvalue="Application.Day13" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day14" />
         <item itemvalue="Application.Day13" />
       </list>
     </recent_temporary>
@@ -363,7 +376,7 @@
       <workItem from="1733448014279" duration="30829000" />
       <workItem from="1733635688442" duration="3116000" />
       <workItem from="1733750043377" duration="35751000" />
-      <workItem from="1734103451345" duration="19942000" />
+      <workItem from="1734103451345" duration="30587000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -533,7 +546,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734130210673</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Day 13 - Claw Contraption&#10;&#10;Somehow, possibly because I was working on the train, I way overcomplicated this problem. Unlike the general disappointment on the internet I knew immediately that this was a systems of equations problem. Where I failed is thinking that the intersection of the two legs had to occur on a whole number point on the graph. Then I did some bad math and made things worse.&#10;&#10;Once I stopeed and drew a picture I went back and ripped out all the useless solutions it ran on the first attempt.">
+      <option name="closed" value="true" />
+      <created>1734136328788</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1734136328788</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression">
+      <option name="closed" value="true" />
+      <created>1734136400347</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1734136400347</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +613,9 @@
     <MESSAGE value="Day 11 - Plutonian Pebbles&#10;&#10;This code has been optimized using Dynamic Programming." />
     <MESSAGE value="Day 12 - Garden Groups&#10;&#10;I feel better about today's code, even if it's messy. I'm worried about the amount of recursion I an using this year." />
     <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Part 1 works, part 2 needs a refactor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 13 - Claw Contraption&#10;&#10;Part 1 works, part 2 needs a refactor." />
+    <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Somehow, possibly because I was working on the train, I way overcomplicated this problem. Unlike the general disappointment on the internet I knew immediately that this was a systems of equations problem. Where I failed is thinking that the intersection of the two legs had to occur on a whole number point on the graph. Then I did some bad math and made things worse.&#10;&#10;Once I stopeed and drew a picture I went back and ripped out all the useless solutions it ran on the first attempt." />
+    <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,6 +644,11 @@
           <url>file://$PROJECT_DIR$/src/Day12.java</url>
           <line>15</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Day14.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
