@@ -37,14 +37,15 @@ public class Day14
                 quadrants[robot.getQuadrant()] += 1L;
             }
 
-            String map = Robot.robotMap(robots);
+            String map = Robot.robotMap(robots, false);
             long density = density(map);
             if (density >  maxDensity)
             {
                 maxDensity = density;
-                System.out.println(map);
+                System.out.println(Robot.robotMap(robots));
                 System.out.print(t);
-                System.out.println(" " + quadrants[1]);
+                System.out.println(" " + density);
+                System.out.println(" " + Arrays.stream(Arrays.copyOfRange(quadrants, 1, 5)).reduce(1L, (long a, long b) -> a * b));
                 try
                 {
                     Thread.sleep(250);
@@ -155,6 +156,11 @@ public class Day14
 
         public static String robotMap(List<Robot> robots)
         {
+            return robotMap(robots, true);
+        }
+
+        public static String robotMap(List<Robot> robots, boolean end)
+        {
             char[][] map = new char[HEIGHT][WIDTH];
 
 
@@ -170,7 +176,7 @@ public class Day14
                 {
                     mapString += map[i][j] == 0 ? "." : (int) map[i][j];
                 }
-                mapString += "\n";
+                if (end) mapString += '\n';
             }
             return mapString;
         }
