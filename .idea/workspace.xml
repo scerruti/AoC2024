@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 14 - Restroom Redoubt&#10;&#10;Complete.">
-      <change afterPath="$PROJECT_DIR$/resources/example/day15a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day15b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day15c.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day15.java" afterDir="false" />
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 15 - Warehouse Woes&#10;&#10;Complete.">
+      <change afterPath="$PROJECT_DIR$/resources/example/day16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/example/day16b.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day16.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Day14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day14.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +91,7 @@
     "Application.Day13.executor": "Debug",
     "Application.Day14.executor": "Run",
     "Application.Day15.executor": "Run",
+    "Application.Day16.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -117,7 +116,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day14">
+  <component name="RunManager" selected="Application.Day16">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -327,6 +326,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day16" />
+      <module name="AoC2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
@@ -351,12 +357,14 @@
       <item itemvalue="Application.Day02 puzzle" />
       <item itemvalue="Application.Day01 test" />
       <item itemvalue="Application.Day01 puzzle" />
+      <item itemvalue="Application.Day16" />
       <item itemvalue="Application.Day14" />
       <item itemvalue="Application.Day15" />
       <item itemvalue="Application.Day13" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day16" />
         <item itemvalue="Application.Day14" />
         <item itemvalue="Application.Day15" />
         <item itemvalue="Application.Day13" />
@@ -390,6 +398,7 @@
       <workItem from="1733635688442" duration="3116000" />
       <workItem from="1733750043377" duration="35751000" />
       <workItem from="1734103451345" duration="47785000" />
+      <workItem from="1734326715429" duration="11617000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -583,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734277710225</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Day 15 - Warehouse Woes&#10;&#10;Complete.">
+      <option name="closed" value="true" />
+      <created>1734326763786</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1734326763786</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,7 +654,8 @@
     <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Somehow, possibly because I was working on the train, I way overcomplicated this problem. Unlike the general disappointment on the internet I knew immediately that this was a systems of equations problem. Where I failed is thinking that the intersection of the two legs had to occur on a whole number point on the graph. Then I did some bad math and made things worse.&#10;&#10;Once I stopeed and drew a picture I went back and ripped out all the useless solutions it ran on the first attempt." />
     <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression" />
     <MESSAGE value="Day 14 - Restroom Redoubt&#10;&#10;Complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 14 - Restroom Redoubt&#10;&#10;Complete." />
+    <MESSAGE value="Day 15 - Warehouse Woes&#10;&#10;Complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 15 - Warehouse Woes&#10;&#10;Complete." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
