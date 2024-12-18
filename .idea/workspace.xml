@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 15 - Warehouse Woes&#10;&#10;Complete.">
-      <change afterPath="$PROJECT_DIR$/resources/example/day16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/example/day16b.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day16.java" afterDir="false" />
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 16 - Reindeer Maze&#10;&#10;Complete.">
+      <change afterPath="$PROJECT_DIR$/resources/example/day17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day17.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +91,7 @@
     "Application.Day14.executor": "Run",
     "Application.Day15.executor": "Run",
     "Application.Day16.executor": "Run",
+    "Application.Day17.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -116,7 +116,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day16">
+  <component name="RunManager" selected="Application.Day17">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -333,6 +333,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day17" />
+      <module name="AoC2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Day05 example" />
       <item itemvalue="Application.Day06 example " />
@@ -358,12 +365,14 @@
       <item itemvalue="Application.Day01 test" />
       <item itemvalue="Application.Day01 puzzle" />
       <item itemvalue="Application.Day16" />
+      <item itemvalue="Application.Day17" />
       <item itemvalue="Application.Day14" />
       <item itemvalue="Application.Day15" />
       <item itemvalue="Application.Day13" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day17" />
         <item itemvalue="Application.Day16" />
         <item itemvalue="Application.Day14" />
         <item itemvalue="Application.Day15" />
@@ -398,7 +407,7 @@
       <workItem from="1733635688442" duration="3116000" />
       <workItem from="1733750043377" duration="35751000" />
       <workItem from="1734103451345" duration="47785000" />
-      <workItem from="1734326715429" duration="11617000" />
+      <workItem from="1734326715429" duration="24008000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -600,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734326763786</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Day 16 - Reindeer Maze&#10;&#10;Complete.">
+      <option name="closed" value="true" />
+      <created>1734471551488</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1734471551488</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,7 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1." />
     <MESSAGE value="Day 1 Comments&#10;&#10;Added comments to day 1" />
     <MESSAGE value="Day 1 Copyright Fix&#10;&#10;I forgot to exclude puzzle input and text from my repo. This commit removes them and I'll have to clean up my repo history." />
     <MESSAGE value="Day 1 - Historian Hysteria&#10;&#10;Day 1 of Advent of Code. This is actually my second attempt at creating this repository because I forgot to exclude the data and my code documentation replicated the problem statement.&#10;&#10;This is a working solution for Day 1." />
@@ -655,7 +671,8 @@
     <MESSAGE value="Day 13 - Claw Contraption&#10;&#10;Adding inspection suppression" />
     <MESSAGE value="Day 14 - Restroom Redoubt&#10;&#10;Complete." />
     <MESSAGE value="Day 15 - Warehouse Woes&#10;&#10;Complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 15 - Warehouse Woes&#10;&#10;Complete." />
+    <MESSAGE value="Day 16 - Reindeer Maze&#10;&#10;Complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 16 - Reindeer Maze&#10;&#10;Complete." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
