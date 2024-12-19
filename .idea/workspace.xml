@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 17 - Chronospacial Computer&#10;&#10;Complete with help from @s5bug">
-      <change afterPath="$PROJECT_DIR$/resources/example/day18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Day18.java" afterDir="false" />
+    <list default="true" id="342fbf0b-0f79-4506-9fee-164e2be20fd2" name="Changes" comment="Day 18 - RAM Run&#10;&#10;Complete">
+      <change afterPath="$PROJECT_DIR$/resources/example/day19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Day19.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,10 +93,11 @@
     "Application.Day16.executor": "Run",
     "Application.Day17.executor": "Debug",
     "Application.Day18.executor": "Debug",
+    "Application.Day19.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024/resources/example",
+    "last_opened_file_path": "/Users/scerruti/IdeaProjects/AoC2024/resources/puzzle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,6 +111,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/puzzle" />
       <recent name="$PROJECT_DIR$/resources/example" />
       <recent name="$PROJECT_DIR$/writeups" />
     </key>
@@ -117,7 +119,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day18">
+  <component name="RunManager" selected="Application.Day19">
     <configuration name="Day01 puzzle" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -313,13 +315,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day15" />
-      <module name="AoC2024" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Day16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day16" />
       <module name="AoC2024" />
@@ -336,6 +331,13 @@
     </configuration>
     <configuration name="Day18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day18" />
+      <module name="AoC2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day19" />
       <module name="AoC2024" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -368,16 +370,16 @@
       <item itemvalue="Application.Day16" />
       <item itemvalue="Application.Day17" />
       <item itemvalue="Application.Day18" />
+      <item itemvalue="Application.Day19" />
       <item itemvalue="Application.Day14" />
-      <item itemvalue="Application.Day15" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day19" />
         <item itemvalue="Application.Day18" />
         <item itemvalue="Application.Day17" />
         <item itemvalue="Application.Day16" />
         <item itemvalue="Application.Day14" />
-        <item itemvalue="Application.Day15" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +410,9 @@
       <workItem from="1733635688442" duration="3116000" />
       <workItem from="1733750043377" duration="35751000" />
       <workItem from="1734103451345" duration="47785000" />
-      <workItem from="1734326715429" duration="38981000" />
+      <workItem from="1734326715429" duration="55698000" />
+      <workItem from="1734624440388" duration="66000" />
+      <workItem from="1734624517545" duration="4405000" />
     </task>
     <task id="LOCAL-00001" summary="Day 1 Writeup&#10;&#10;Added top level README&#10;Added write up for Day 1.">
       <option name="closed" value="true" />
@@ -626,7 +630,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734487921329</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Day 18 - RAM Run&#10;&#10;Complete">
+      <option name="closed" value="true" />
+      <created>1734550174131</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1734550174131</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Day 1 Copyright Fix&#10;&#10;I forgot to exclude puzzle input and text from my repo. This commit removes them and I'll have to clean up my repo history." />
     <MESSAGE value="Day 1 - Historian Hysteria&#10;&#10;Day 1 of Advent of Code. This is actually my second attempt at creating this repository because I forgot to exclude the data and my code documentation replicated the problem statement.&#10;&#10;This is a working solution for Day 1." />
     <MESSAGE value="Part 1 refactored&#10;&#10;Move the safe report code into a separate method." />
     <MESSAGE value="Day 02 - Red-Nosed Reports&#10;&#10;Part 2 rough draft." />
@@ -681,7 +692,8 @@
     <MESSAGE value="Day 15 - Warehouse Woes&#10;&#10;Complete." />
     <MESSAGE value="Day 16 - Reindeer Maze&#10;&#10;Complete." />
     <MESSAGE value="Day 17 - Chronospacial Computer&#10;&#10;Complete with help from @s5bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 17 - Chronospacial Computer&#10;&#10;Complete with help from @s5bug" />
+    <MESSAGE value="Day 18 - RAM Run&#10;&#10;Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 18 - RAM Run&#10;&#10;Complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,19 +741,17 @@
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Day18.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="105" />
+          <url>file://$PROJECT_DIR$/src/Day19.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Day18.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Day18.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="113" />
+          <url>file://$PROJECT_DIR$/src/Day19.java</url>
+          <line>75</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
