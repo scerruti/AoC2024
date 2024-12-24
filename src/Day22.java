@@ -10,14 +10,15 @@ public class Day22
     public static final int PRUNE_FACTOR = 16777216;
     private static final HashMap<Integer, HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>> ledger = new HashMap<>();
     private static Set<String> offers = new HashSet<>();
+    private static int tots = 0 ;
 
     public static void main(String[] args)
     {
         long total = 0;
 
-        int[] starts = {1, 2, 3, 2024};
+//        int[] starts = {1, 2, 3, 2024};
 
-//        int[] starts = readIntegersFromFile("puzzle/day22.txt");
+        int[] starts = readIntegersFromFile("puzzle/day22.txt");
 
 
         int[] buffer = new int[4];
@@ -38,6 +39,7 @@ public class Day22
 
                 // Only take the first occurrence of a sequence
                 String contract = String.format("%d %d %d %d", buffer[i % 4], buffer[(i + 3) % 4], buffer[(i + 2) % 4], buffer[(i + 1) % 4]);
+
                 if (i > 2 && !offers.contains(contract)) {
                     updateTree(buffer, offer, i % 4);
                     offers.add(contract);
@@ -62,8 +64,13 @@ public class Day22
         int key3 = ringBuffer[(index + 2) % 4];
         int key4 = ringBuffer[(index + 1) % 4];
 
-        ledger.computeIfAbsent(key1, k -> new HashMap<>()).computeIfAbsent(key2, k -> new HashMap<>()).computeIfAbsent(key3, k -> new HashMap<>()).computeIfAbsent(key4, k -> 0);
+        ledger.computeIfAbsent(key1, k -> new HashMap<>())
+                .computeIfAbsent(key2, k -> new HashMap<>())
+                .computeIfAbsent(key3, k -> new HashMap<>()).
+                computeIfAbsent(key4, k -> 0);
         ledger.get(key1).get(key2).get(key3).merge(key4, offer, Integer::sum);
+        if (key1 == 1 && key2 == -3 && key3 == 3 && key4 == 1)
+            System.out.println(ledger.get(key1).get(key2).get(key3).get(key4));
     }
 
     /**
