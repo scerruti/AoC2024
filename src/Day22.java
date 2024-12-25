@@ -9,42 +9,47 @@ public class Day22
 
     public static final int PRUNE_FACTOR = 16777216;
     private static final HashMap<Integer, HashMap<Integer, HashMap<Integer, HashMap<Integer, Integer>>>> ledger = new HashMap<>();
-    private static Set<String> offers = new HashSet<>();
-    private static int tots = 0 ;
+    private static Set<String> contracts = new HashSet<>();
 
     public static void main(String[] args)
     {
         long total = 0;
+        long count = 0;
 
 //        int[] starts = {1, 2, 3, 2024};
 
         int[] starts = readIntegersFromFile("puzzle/day22.txt");
 
-
-        int[] buffer = new int[4];
-        int bufferIdx = 0;
+        Map<String, Integer> offers = new HashMap<>();
+        ArrayList<String> contracts = new ArrayList<>();
 
         for (int start : starts)
         {
-            offers.clear();
+            contracts.clear();
 
             int secret = start;
-            int prev = 0;
+            int prev = secret % 10;
+            int[] sequence = new int[2000];
             for (int i = 0; i < 2000; i++)
             {
                 secret = calculateSecret(secret);
 
                 int offer = secret % 10;
-                if (i > 0) buffer[i % 4] = offer - prev;
 
-                // Only take the first occurrence of a sequence
-                String contract = String.format("%d %d %d %d", buffer[i % 4], buffer[(i + 3) % 4], buffer[(i + 2) % 4], buffer[(i + 1) % 4]);
-
-                if (i > 2 && !offers.contains(contract)) {
-                    updateTree(buffer, offer, i % 4);
-                    offers.add(contract);
+                sequence[i] = offer - prev;
+                if (i > 2)
+                {
+                    String contractString = String.format("%d %d %d %d", sequence[i-3], sequence[i-2], sequence[i-1], sequence[i]);
+                    if (!contracts.contains(contractString)) {
+                        offers.putIfAbsent(contractString, 0);
+                        offers.merge(contractString, offer, Integer::sum);
+                        if (contractString.equals("1 -3 3 1")) {
+                            count++;
+                            System.out.println(offer);
+                        }
+                        contracts.add(contractString);
+                    }
                 }
-
                 prev = offer;
             }
 
@@ -53,24 +58,21 @@ public class Day22
         }
 
         System.out.printf("%nPart 1: %d%n", total);
-        total = maxBananas();
+//        total = maxBananas();
+        total = offers.values().stream().max(Integer::compareTo).get();
         System.out.printf("%nPart 2: %d%n", total);
     }
 
-    public static void updateTree(int[] ringBuffer, int offer, int index)
+    public static void updateTree(int[] keys, int offer)
     {
-        int key1 = ringBuffer[index];
-        int key2 = ringBuffer[(index + 3) % 4];
-        int key3 = ringBuffer[(index + 2) % 4];
-        int key4 = ringBuffer[(index + 1) % 4];
-
-        ledger.computeIfAbsent(key1, k -> new HashMap<>())
-                .computeIfAbsent(key2, k -> new HashMap<>())
-                .computeIfAbsent(key3, k -> new HashMap<>()).
-                computeIfAbsent(key4, k -> 0);
-        ledger.get(key1).get(key2).get(key3).merge(key4, offer, Integer::sum);
-        if (key1 == 1 && key2 == -3 && key3 == 3 && key4 == 1)
-            System.out.println(ledger.get(key1).get(key2).get(key3).get(key4));
+        ledger.computeIfAbsent(keys[0], k -> new HashMap<>())
+                .computeIfAbsent(keys[1], k -> new HashMap<>())
+                .computeIfAbsent(keys[2], k -> new HashMap<>()).
+                putIfAbsent(keys[3], 0);
+        ledger.get(keys[0]).get(keys[1]).get(keys[2]).merge(keys[3], offer, Integer::sum);
+//        if (keys[0] == 1 && keys[1] == -3 && keys[2] == 3 && keys[3] == 1)
+//        if (keys[0] == -2 && keys[1] == 1 && keys[2] == -1 && keys[3] == 3)
+//            System.out.println(ledger.get(keys[0]).get(keys[1]).get(keys[2]).get(keys[3]));
     }
 
     /**
