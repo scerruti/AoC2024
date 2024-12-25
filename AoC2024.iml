@@ -34,5 +34,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="net.sf.jung.visualization" level="project" />
+    <orderEntry type="library" name="net.sf.jung.graph.impl" level="project" />
   </component>
 </module>
